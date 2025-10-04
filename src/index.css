@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  background-color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+}
+
+.logo {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 700;
+}
+
+/* Linear Gradient Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.moving-gradient {
+  background: linear-gradient(270deg, #000000, #2f2f2f, #000000);
+  background-size: 600% 600%; /* Makes the gradient move smoothly */
+  animation: gradientShift 10s ease infinite; /* 10s loop */
+}
+
+@keyframes radialShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.radial-gradient-bg {
+  background: radial-gradient(circle at center, #000000, #2f2f2f, #000000);
+  background-size: 200% 200%;
+  animation: radialShift 15s ease infinite;
+}
