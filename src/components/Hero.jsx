@@ -1,5 +1,3 @@
-import React from "react";
-
 const Hero = () => {
   return (
     <section className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 mt-20">
@@ -18,9 +16,12 @@ const Hero = () => {
         </p>
 
         {/* CTA Button */}
-        <div className="mt-6">
-          <button className="px-6 py-3 bg-white text-black rounded-xl font-semibold hover:bg-gray-200 transition">
+        <div className="mt-6 flex gap-6">
+          <button className="px-6 py-3 bg-white text-black rounded font-semibold hover:bg-gray-200 transition">
             Launch Studio
+          </button>
+          <button className="px-6 py-3 bg-white/40 text-black rounded font-semibold hover:bg-gray-200 transition">
+            View Docs
           </button>
         </div>
       </div>

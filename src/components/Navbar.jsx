@@ -1,5 +1,3 @@
-import React from "react";
-
 const Navbar = () => {
   return (
     <nav className="fixed top-6 backdrop-blur-lg bg-white/15 border border-white/10 rounded-2xl px-10 py-4 flex items-center justify-between max-w-5xl w-[90%] mx-auto text-sm font-light tracking-wide">
