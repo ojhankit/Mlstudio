@@ -52,3 +52,12 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 200% 200%;
   animation: radialShift 15s ease infinite;
 }
+
+/* Add this to your global CSS file or Tailwind global styles */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
