@@ -11,7 +11,6 @@ const Navbar = () => {
         ML<span className="font-extralight text-xl">Studio</span>
       </div>
 
-      {/* Middle: Links (desktop only) */}
       <ul className="hidden md:flex items-center justify-center gap-8">
         <li>
           <a
@@ -39,14 +38,12 @@ const Navbar = () => {
         </li>
       </ul>
 
-      {/* Right: Button (hidden on mobile) */}
       <div className="hidden md:block">
         <button className="px-5 py-2 bg-white text-black rounded hover:bg-gray-200 transition">
           Launch
         </button>
       </div>
 
-      {/* Hamburger Icon (mobile only) */}
       <div className="md:hidden flex items-center">
         <button
           onClick={() => setMenuOpen(!menuOpen)}

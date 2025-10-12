@@ -30,14 +30,13 @@ const newsData = [
 const News = () => {
   const [selectedNews, setSelectedNews] = useState(null);
 
-  // Disable body scroll when modal is open
   useEffect(() => {
     document.body.style.overflow = selectedNews ? "hidden" : "auto";
   }, [selectedNews]);
 
   return (
     <section className="w-full flex flex-col items-center bg-black text-white py-16 px-6">
-      {/* Header Row */}
+
       <div className="w-full max-w-6xl flex flex-row justify-between items-center mb-10">
         <h2 className="text-3xl font-bold">Latest AI News</h2>
         <button className="text-white hover:text-gray-400 transition">
@@ -45,7 +44,6 @@ const News = () => {
         </button>
       </div>
 
-      {/* News Cards */}
       <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {newsData.map((news) => (
           <div

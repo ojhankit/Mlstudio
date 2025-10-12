@@ -40,7 +40,6 @@ const FAQ = () => {
   return (
     <section className="w-full flex flex-col items-center bg-black py-16 px-4">
       
-      {/* Top Row */}
       <div className="w-full flex flex-col md:flex-row items-center justify-between mb-10">
         <div className="flex flex-col mb-6 md:mb-0">
           <p className="text-sm text-gray-700 uppercase mb-2">Frequently Asked Questions</p>
@@ -48,7 +47,6 @@ const FAQ = () => {
         </div>
       </div>
 
-      {/* FAQ Grid */}
       <div className="w-full grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
         {faqData.map((faq) => (
           <Accordion

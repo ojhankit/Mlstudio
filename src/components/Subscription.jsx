@@ -10,22 +10,19 @@ const Subscription = () => {
 
     setSubmitted(true);
 
-    // Reset after a short animation
     setTimeout(() => {
       setSubmitted(false);
-      setEmail(""); // optional: clear input
+      setEmail("");
     }, 1000);
   };
 
   return (
     <section id="subscription" className="w-full radial-gradient-bg flex flex-col items-center bg-black py-16 px-4">
       
-      {/* Top small title with border */}
       <div className="border border-gray-300 rounded-full px-4 py-1 mb-4">
         <p className="text-sm text-white uppercase">Join With Us</p>
       </div>
 
-      {/* Headings */}
       <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-2">
         Flexible AI Plan For
       </h1>
@@ -33,12 +30,10 @@ const Subscription = () => {
         Every Business
       </h2>
 
-      {/* Paragraph */}
       <p className="text-gray-400 text-center max-w-xl mb-6">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et metus nec justo convallis tempor.
       </p>
 
-      {/* Email input and button */}
       <form 
         onSubmit={handleSubmit} 
         className="flex flex-col sm:flex-row gap-4 w-full max-w-md"

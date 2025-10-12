@@ -34,7 +34,7 @@ const Workflow = () => {
 
       <motion.div
         className="flex gap-8"
-        animate={{ x: [0, -1152] }} // Move exactly the width of 4 cards + gaps
+        animate={{ x: [0, -1152] }}
         transition={{
           repeat: Infinity,
           duration: 20,
@@ -42,7 +42,7 @@ const Workflow = () => {
           repeatType: "loop"
         }}
       >
-        {/* Render steps three times for seamless loop */}
+
         {[...steps, ...steps, ...steps].map((step, index) => (
           <div
             key={index}
