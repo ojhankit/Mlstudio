@@ -1,4 +1,11 @@
 const Hero = () => {
+  const handleScrollToSubscription = () => {
+    const section = document.getElementById("subscription");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="w-full min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 mt-20">
       
@@ -15,9 +22,12 @@ const Hero = () => {
           streamline workflows, and integrate models with zero hassle.
         </p>
 
-        {/* CTA Button */}
-        <div className="mt-6 flex gap-6">
-          <button className="px-6 py-3 bg-white text-black rounded font-semibold hover:bg-gray-200 transition">
+        {/* CTA Buttons */}
+        <div className="mt-6 flex gap-6 justify-center md:justify-start">
+          <button
+            onClick={handleScrollToSubscription}
+            className="px-6 py-3 bg-white text-black rounded font-semibold hover:bg-gray-200 transition"
+          >
             Launch Studio
           </button>
           <button className="px-6 py-3 bg-white/40 text-black rounded font-semibold hover:bg-gray-200 transition">
@@ -29,12 +39,11 @@ const Hero = () => {
       {/* Right Column: Illustration/Image */}
       {/* <div className="flex-1 flex justify-center md:justify-end mt-10 md:mt-0">
         <img
-          src="/hero-ml.png" // Replace with your illustration
+          src="/hero-ml.png"
           alt="ML Dashboard Illustration"
           className="w-[90%] md:w-full rounded-2xl shadow-2xl"
         />
       </div> */}
-
     </section>
   );
 };

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { FaUpload, FaRobot, FaCloudUploadAlt, FaChartLine } from "react-icons/fa";
 
@@ -26,7 +26,6 @@ const steps = [
 ];
 
 const Workflow = () => {
-  
   return (
     <section className="w-full py-20 bg-black text-white overflow-hidden">
       <h2 className="text-4xl md:text-5xl font-barlow font-semibold mb-12 text-center">
@@ -34,11 +33,17 @@ const Workflow = () => {
       </h2>
 
       <motion.div
-        className="flex gap-8 w-max"
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
+        className="flex gap-8"
+        animate={{ x: [0, -1152] }} // Move exactly the width of 4 cards + gaps
+        transition={{
+          repeat: Infinity,
+          duration: 20,
+          ease: "linear",
+          repeatType: "loop"
+        }}
       >
-        {steps.concat(steps).map((step, index) => (
+        {/* Render steps three times for seamless loop */}
+        {[...steps, ...steps, ...steps].map((step, index) => (
           <div
             key={index}
             className="flex-shrink-0 w-64 bg-gray-900/30 backdrop-blur-md rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-lg hover:shadow-white/20 transition"
