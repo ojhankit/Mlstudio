@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
+import { FaArrowRight } from "react-icons/fa";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -39,8 +40,15 @@ const Navbar = () => {
       </ul>
 
       <div className="hidden md:block">
-        <button className="px-5 py-2 bg-white text-black rounded hover:bg-gray-200 transition">
+        {/* <button className="px-5 py-2 bg-white text-black rounded hover:bg-gray-200 transition">
           Launch
+        </button> */}
+        <button className="group relative px-6 py-2 rounded-full overflow-hidden bg-gradient-to-r from-white to-gray-200 text-black font-medium flex items-center gap-2 shadow-[0_0_15px_rgba(255,255,255,0.2)] hover:shadow-[0_0_25px_rgba(255,255,255,0.4)] transition-all duration-300">
+          <span className="relative z-10">Join</span>
+          <FaArrowRight className="relative z-10 text-black group-hover:translate-x-1 transition-transform duration-300" />
+
+          {/* subtle moving gradient overlay */}
+          <span className="absolute inset-0 bg-gradient-to-r from-gray-300 via-white to-gray-300 opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-300"></span>
         </button>
       </div>
 

@@ -8,6 +8,7 @@ import FAQ from './components/FAQ';
 import Plans from './components/Plans';
 import Footer from './components/Footer';
 import News from './components/News';
+import ScrollProgress from './components/ScrollProgress';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <FAQ/>
         <Subscription/>
         <Footer/>
+        <ScrollProgress/>
     </div>
   )
 }
